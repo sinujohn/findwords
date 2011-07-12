@@ -1,0 +1,70 @@
+Developer:
+            Sinu John
+            sinuvian at gmail dot com
+            www.sinujohn.wordpress.com
+
+Usage:
+       ./findwords inputfile
+
+
+1. Program specifications
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+In a grid of size NxM are arranged NxM letters. The hidden words are arranged as contiguous letters in the grid.The list of all hidden words is known, and the aim of the puzzle is to find all the hidden words in the grid.
+
+When all the words are found, all the unmatched letters (letters that do not belong to any matched words) are put together in a sentence.
+To form the sentence, you collect all the unmatched letters in the grid from the top left corner to the right corner, then moving to the next line and so on through the grid.
+
+Two letters are considered contiguous if they are on the same row, column or diagonal – and no other letters are in between.
+
+In all the following example cases, A and B are considered contiguous:
+
+A B  A X  X B  A X
+X X  B X  A X  X B
+The words in the grid can also have any orientation (e.g: WORD can be either “WORD” or “DROW”, and the same for words made of vertical or diagonal letters).
+
+The program takes a single parameter on the command line, that is the name of a file containing the schema of the game and the list of hidden words. The format of the input file is specified in the Input Specifications section below.
+
+The program has to detect all the given words in the grid and find the unmatched letters. The program has then to print on the standard output a single line (no spaces) containing all the unmatched letters, followed by a newline (“\n”).
+
+2. Input specifications
+~~~~~~~~~~~~~~~~~~~~~~~~~
+The input file consists of two sections, separated by an empty line.
+
+The first section of the file is the game grid. The grid is made of strings, separated by a single newline (“\n”). Each string is an array of letters (ASCII chars, upper case).
+
+The second section of the file is the list of words to be found. Each word is a string, separated by a single newline (“\n”). Each string is made of ASCII chars, upper case.
+
+An example of input file is:
+
+ELGOOGWWW
+TIRXMAHIR
+BATMANZNC
+CMRVLTOLD
+
+MAIL
+WIN
+GOOGLE
+TAR
+BATMAN
+CAR
+WWW
+TOLD
+CD
+
+3. Output specifications
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Once all the given words are found in the grid, the letters in the grid that does not belong to any words are collected separately. Your program should then write on the standard output all the unmatched letters on a single line, followed by a newline.
+Following the previous example:
+
+XMAHRZVL
+
+4. Test Cases
+~~~~~~~~~~~~~~~
+Test Cases can be found in the "sample" folder.
+
+Input	Expected Output
+a.in	a.out
+b.in	b.out
+c.in	c.out
+d.in	d.out
+e.in	e.out
